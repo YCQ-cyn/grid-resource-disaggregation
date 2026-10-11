@@ -1,0 +1,36 @@
+{
+  "batches": [
+    {
+      "id": "historical",
+      "main": "../data/historical/main.csv",
+      "pv": "../data/historical/pv.csv",
+      "energy": "../data/historical/energy.csv",
+      "charger": null,
+      "async": false,
+      "energy_supervised": true,
+      "dates": {
+        "train": [],
+        "validation": [],
+        "internal_test": [],
+        "domain_test": []
+      }
+    },
+    {
+      "id": "new_site",
+      "main": "../data/new_site/main.csv",
+      "pv": "../data/new_site/pv.csv",
+      "energy": null,
+      "charger": null,
+      "async": true,
+      "energy_supervised": false,
+      "dates": {
+        "train": [],
+        "validation": [],
+        "test": []
+      }
+    }
+  ],
+  "auxiliary_chargers": [],
+  "excluded_shared_dates": [],
+  "note": "Set non-overlapping ISO calendar dates explicitly before running."
+}
