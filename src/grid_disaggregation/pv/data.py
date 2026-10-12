@@ -91,7 +91,7 @@ def prepare(plan_path, fields_path, output):
             gap = d.loc[ids, 'gap_indicator'].to_numpy(bool)
             valid = d.loc[ids, ['source_valid_'+f for f in fields]].to_numpy(bool) & ~gap[:, None]
             raw = d.loc[ids, ['raw_main_'+f for f in fields]].to_numpy(float)
-            filled = pd.DataFrame(np.where(valid, raw, np.nan)).ffill(limit=3).to_numpy()
+            filled = pd.DataFrame(np.where(valid, raw, np.nan)).ffill(limit=3).to_numpy(copy=True)
             filled[gap] = np.nan
             for k, field in enumerate(fields):
                 d.loc[ids, 'main_'+field] = filled[:, k]
