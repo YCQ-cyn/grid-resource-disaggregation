@@ -84,7 +84,7 @@ python -m pytest -q
 
 ## 评价与适用边界
 
-资源辨识以PR-AUC、Macro F1和单类Precision／Recall／F1评价；PV分离报告MAE、Generation MAE、RMSE、R²、Activity F1和电量偏差，并单独检查非活跃假电量、低功率误差与日尺度偏差。[已有实验摘要](docs/zh/evaluation.md)明确区分Validation、内部Test和复用时间留出。
+资源辨识以PR-AUC、Macro F1和单类Precision／Recall／F1评价；PV分离报告MAE、Generation MAE、RMSE、R²、Activity F1和电量偏差，并单独检查非活跃假电量、低功率误差与日尺度偏差。指标口径与数据划分要求见[评价说明](docs/zh/evaluation.md)。
 
 能源站标签目前是功率状态代理，不是经独立核实的储能充放电真值。部分充电配对拓扑未独立确认，相关指标属于探索性结果。总开功率分解本身不唯一，跨台区、容量和季节的泛化需要独立数据验证。
 

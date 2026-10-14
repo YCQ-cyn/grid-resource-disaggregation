@@ -84,7 +84,7 @@ Copy the configuration template to `config/dataset.local.json` and specify your 
 
 ## Evaluation and scope
 
-Identification uses PR-AUC, Macro F1 and per-resource Precision, Recall and F1. PV evaluation includes MAE, Generation MAE, RMSE, R², Activity F1 and energy bias, with separate checks for inactive false energy, low-power errors and daily bias. The [experiment summary](docs/en/evaluation.md) distinguishes Validation, internal Test and reused chronological holdout results.
+Identification uses PR-AUC, Macro F1 and per-resource Precision, Recall and F1. PV evaluation includes MAE, Generation MAE, RMSE, R², Activity F1 and energy bias, with separate checks for inactive false energy, low-power errors and daily bias. See [Evaluation](docs/en/evaluation.md) for metric definitions and data-split requirements.
 
 The energy-station label is an operating-power proxy, not independently verified storage charge/discharge truth. Some charger topology is unverified, so associated metrics are exploratory. Power decomposition from a main meter is not unique. Generalization across feeders, capacities and seasons requires independent evaluation.
 

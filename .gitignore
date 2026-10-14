@@ -38,3 +38,14 @@ normalizer.json
 manifest.json
 *.pem
 *.key
+
+# Local experiment runs and process records
+experiments/
+runs/
+logs/
+wandb/
+mlruns/
+tensorboard/
+events.out.tfevents.*
+*.pid
+.vendor/
